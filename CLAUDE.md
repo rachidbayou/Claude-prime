@@ -4,7 +4,7 @@ Consignes pour Claude Code sur ce dépôt.
 
 ## Projet
 
-Claude-prime : projet en phase de démarrage. Stack et objectif à définir (voir README).
+Claude-prime : projet en phase de démarrage. Site statique publié avec GitHub Pages (voir README).
 
 ## Conventions
 
@@ -14,4 +14,5 @@ Claude-prime : projet en phase de démarrage. Stack et objectif à définir (voi
 
 ## Commandes
 
-[À compléter une fois la stack choisie : build, tests, lint]
+- Site statique (HTML/CSS), sans build.
+- Aperçu local : `python3 -m http.server 8000`.
