@@ -22,7 +22,7 @@ Puis ouvrir http://localhost:8000.
 1. Fusionner la branche de travail dans la branche par défaut (ou publier directement depuis la branche de travail).
 2. Sur GitHub : **Settings → Pages → Build and deployment**.
 3. Source : *Deploy from a branch*, branche choisie, dossier `/ (root)`.
-4. L'adresse sera `https://rachidbayou.github.io/Claude-prime/` (à vérifier dans l'onglet Pages après activation).
+4. L'adresse sera `https://rachidbayou.github.io/Claude-prime/` (à vérifier dans l'onglet Pages après activation). Si le déploiement reste bloqué, pousser un nouveau commit relance la publication.
 
 ## Objectif du projet
 
