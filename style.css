@@ -14,3 +14,4 @@ h1 { margin: 0 0 .5rem; font-size: 2.25rem; color: var(--accent); }
 code { background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 4px; }
 footer { padding: 1.5rem 1rem; text-align: center; color: var(--muted); }
 a { color: var(--accent); }
+.magritte { margin-top: 2rem; color: var(--muted); font-style: italic; }
