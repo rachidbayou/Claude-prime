@@ -1,6 +1,6 @@
 (function () {
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.tool'));
-  var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
   var search = document.getElementById('q');
   var count = document.getElementById('count');
   var empty = document.getElementById('empty');
@@ -23,13 +23,16 @@
     empty.hidden = n !== 0;
   }
 
-  filters.forEach(function (b) {
+  chips.forEach(function (b) {
     b.addEventListener('click', function () {
       cat = b.dataset.cat;
-      filters.forEach(function (x) { x.classList.toggle('active', x === b); });
+      chips.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       apply();
     });
   });
   search.addEventListener('input', apply);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== search) { e.preventDefault(); search.focus(); }
+  });
   apply();
 })();
