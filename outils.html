@@ -3,352 +3,454 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Outils pour coder avec l'IA – Claude-prime</title>
-  <meta name="theme-color" content="#c15f3c">
-  <meta name="description" content="Une sélection de 61 outils pour coder avec l'IA : assistants de code, prototypage, MCP, tests, déploiement, design et composants UI.">
-  <link rel="stylesheet" href="style.css">
+  <title>Outils du vibe coding · Claude-prime</title>
+  <meta name="description" content="61 outils pour coder avec l'IA : assistants de code, prototypage, MCP, tests, déploiement, design et composants UI.">
+  <meta name="theme-color" content="#0055A4">
   <link rel="stylesheet" href="outils.css">
 </head>
 <body>
-  <main class="wide">
-    <a class="back" href="index.html">← Accueil</a>
+  <div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="shell">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="index.html">Claude<i>-prime</i></a>
+      <div class="nav-links"><a href="#catalogue">Catalogue</a><a class="pill" href="index.html">Accueil</a></div>
+    </nav>
+
     <header class="hero">
-      <h1>Outils pour coder avec l'IA</h1>
-      <p class="lead">Assistants de code, prototypage, MCP, tests, déploiement, design : une sélection à parcourir par catégorie ou par mot-clé.</p>
-      <p class="meta">Appuyez sur <kbd>/</kbd> pour chercher</p>
+      <div>
+        <p class="eyebrow">Boîte à outils 2026</p>
+        <h1>Codez à la <span class="accent">vibe.</span><br>Livrez avec méthode.</h1>
+        <p class="lead">Assistants de code, prototypage, MCP, tests, déploiement, design : de quoi passer d'une idée écrite en langage naturel à un site testé et en ligne.</p>
+        <div class="actions">
+          <a class="button" href="#catalogue">Explorer 61 outils ↓</a>
+          <a class="button secondary" href="#methode">Ma méthode</a>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="win"><span></span><span></span><span></span></div>
+        <pre><b>&gt;</b> ajoute une page outils
+  avec recherche et filtres
+
+<em>✓</em> outils.html
+<em>✓</em> outils.css
+<em>✓</em> outils.js</pre>
+        <div class="stripes"><i></i><i></i><i></i></div>
+      </div>
     </header>
 
-    <div class="toolbar">
-      <input class="search" id="q" type="search" placeholder="Rechercher (ex. MCP, terminal, animation…)" aria-label="Rechercher un outil" autocomplete="off">
-      <div class="chips" role="group" aria-label="Catégories">
-        <button class="chip" type="button" data-cat="all" aria-pressed="true">Tous</button>
-        <button class="chip" type="button" data-cat="code" aria-pressed="false">Code</button>
-        <button class="chip" type="button" data-cat="apps" aria-pressed="false">Prototypage</button>
-        <button class="chip" type="button" data-cat="context" aria-pressed="false">Contexte et MCP</button>
-        <button class="chip" type="button" data-cat="quality" aria-pressed="false">Tests et sécurité</button>
-        <button class="chip" type="button" data-cat="delivery" aria-pressed="false">Déploiement</button>
-        <button class="chip" type="button" data-cat="operations" aria-pressed="false">Agents</button>
-        <button class="chip" type="button" data-cat="inspi" aria-pressed="false">Inspiration</button>
-        <button class="chip" type="button" data-cat="ui" aria-pressed="false">Composants UI</button>
-        <button class="chip" type="button" data-cat="anim" aria-pressed="false">Animation et effets</button>
-      </div>
-      <p class="count" id="count" aria-live="polite"></p>
-    </div>
-
-    <section class="grid" aria-label="Liste des outils">
-      <a class="card" href="https://github.com/Aider-AI/aider" data-cat="code" target="_blank" rel="noopener">
-        <h2>Aider <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Pair programming en terminal avec des modèles cloud ou locaux et une intégration Git.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://code.claude.com/docs/en/overview" data-cat="code" target="_blank" rel="noopener">
-        <h2>Claude Code <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Assistant de code agentique avec workflows en terminal et par projet.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://github.com/cline/cline" data-cat="code" target="_blank" rel="noopener">
-        <h2>Cline <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Agent de code pour IDE, terminal et desktop, avec outils fichiers, commandes et navigateur.</p>
-        <div class="tags"><span class="tag cat">Code</span></div>
-      </a>
-      <a class="card" href="https://www.cursor.com/" data-cat="code" target="_blank" rel="noopener">
-        <h2>Cursor <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Éditeur et agent de code pour l&#x27;implémentation, le débogage et la revue de code.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">IDE</span></div>
-      </a>
-      <a class="card" href="https://github.com/google-gemini/gemini-cli" data-cat="code" target="_blank" rel="noopener">
-        <h2>Gemini CLI <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Agent de code open source en terminal avec accès par clé API, Vertex ou offre entreprise éligible. L&#x27;accès par abonnement grand public est retiré.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://github.com/features/copilot" data-cat="code" target="_blank" rel="noopener">
-        <h2>GitHub Copilot <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Assistance au code et workflows d&#x27;agents dans GitHub et les IDE compatibles.</p>
-        <div class="tags"><span class="tag cat">Code</span></div>
-      </a>
-      <a class="card" href="https://github.com/aaif-goose/goose" data-cat="code" target="_blank" rel="noopener">
-        <h2>Goose <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Agent local extensible avec workflows de code, interfaces desktop et CLI, et outils MCP.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://kiro.dev" data-cat="code" target="_blank" rel="noopener">
-        <h2>Kiro <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Agent de code AWS avec workflows IDE et CLI, spécifications et tests.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">IDE</span></div>
-      </a>
-      <a class="card" href="https://openai.com/codex/" data-cat="code" target="_blank" rel="noopener">
-        <h2>OpenAI Codex CLI <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Agent de code OpenAI qui s&#x27;exécute localement dans le terminal.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://github.com/earendil-works/pi" data-cat="code" target="_blank" rel="noopener">
-        <h2>Pi <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Agent de code en terminal, extensible et intégrable comme harnais.</p>
-        <div class="tags"><span class="tag cat">Code</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://bolt.new/" data-cat="apps" target="_blank" rel="noopener">
-        <h2>Bolt.new <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Création d&#x27;applications en langage naturel, par StackBlitz.</p>
-        <div class="tags"><span class="tag cat">Prototypage</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://github.com/dyad-sh/dyad" data-cat="apps" target="_blank" rel="noopener">
-        <h2>Dyad <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Créer des applications en local avec des fournisseurs de modèles configurables.</p>
-        <div class="tags"><span class="tag cat">Prototypage</span><span class="tag">Desktop</span></div>
-      </a>
-      <a class="card" href="https://lovable.dev/" data-cat="apps" target="_blank" rel="noopener">
-        <h2>Lovable <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Génération d&#x27;applications full-stack avec Supabase.</p>
-        <div class="tags"><span class="tag cat">Prototypage</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://www.onlook.com/" data-cat="apps" target="_blank" rel="noopener">
-        <h2>Onlook <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Modifier visuellement les interfaces d&#x27;une application tout en travaillant sur le code.</p>
-        <div class="tags"><span class="tag cat">Prototypage</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://replit.com/" data-cat="apps" target="_blank" rel="noopener">
-        <h2>Replit <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Créer et itérer sur des applications avec Replit Agent.</p>
-        <div class="tags"><span class="tag cat">Prototypage</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://v0.app/" data-cat="apps" target="_blank" rel="noopener">
-        <h2>v0 <span class="go" aria-hidden="true">↗</span></h2>
-        <p>L&#x27;IA de Vercel pour générer des UI et du React.</p>
-        <div class="tags"><span class="tag cat">Prototypage</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://github.com/caliber-ai-org/ai-setup" data-cat="context" target="_blank" rel="noopener">
-        <h2>Caliber <span class="go" aria-hidden="true">↗</span></h2>
-        <p>CLI qui génère et synchronise les configurations d&#x27;agents IA pour Claude Code, Cursor et Codex.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/upstash/context7" data-cat="context" target="_blank" rel="noopener">
-        <h2>Context7 <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Récupérer la documentation des bibliothèques comme contexte de code.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" data-cat="context" target="_blank" rel="noopener">
-        <h2>Filesystem MCP <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Donner aux agents un accès contrôlé aux fichiers du projet.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/github/github-mcp-server" data-cat="context" target="_blank" rel="noopener">
-        <h2>GitHub MCP <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Connecter les workflows de dépôts, d&#x27;issues et de pull requests.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/neondatabase/mcp-server-neon" data-cat="context" target="_blank" rel="noopener">
-        <h2>Neon <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Connecter les workflows de développement aux bases de données Neon.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://developers.notion.com/guides/mcp/overview" data-cat="context" target="_blank" rel="noopener">
-        <h2>Notion MCP <span class="go" aria-hidden="true">↗</span></h2>
-        <p>MCP officiel hébergé pour chercher, lire et mettre à jour du contenu Notion.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/Fission-AI/OpenSpec" data-cat="context" target="_blank" rel="noopener">
-        <h2>OpenSpec <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Cadre de développement piloté par les spécifications pour assistants de code IA.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/supabase/mcp" data-cat="context" target="_blank" rel="noopener">
-        <h2>Supabase MCP <span class="go" aria-hidden="true">↗</span></h2>
-        <p>MCP officiel pour les schémas, requêtes et configurations de projet Supabase.</p>
-        <div class="tags"><span class="tag cat">Contexte et MCP</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/vostride/agent-qa" data-cat="quality" target="_blank" rel="noopener">
-        <h2>Agent QA <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Écrire et exécuter des tests web et mobile en langage naturel.</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/microsoft/playwright-mcp" data-cat="quality" target="_blank" rel="noopener">
-        <h2>Playwright MCP (Microsoft) <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Automatisation officielle du navigateur par instantanés structurés des pages.</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/The-PR-Agent/pr-agent" data-cat="quality" target="_blank" rel="noopener">
-        <h2>PR-Agent <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Relecteur de pull requests maintenu par la communauté, distinct de Qodo.</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span></div>
-      </a>
-      <a class="card" href="https://getprbl.com" data-cat="quality" target="_blank" rel="noopener">
-        <h2>Prbl <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Scanner une application en ligne ou un dépôt pour trouver les failles fréquentes du code généré par IA. La GitHub Action commente les PR. Le correcteur Pro applique des corrections vérifiées.</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://www.qodo.ai" data-cat="quality" target="_blank" rel="noopener">
-        <h2>Qodo <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Moteur de revue de code par IA (anciennement CodiumAI).</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span></div>
-      </a>
-      <a class="card" href="https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp" data-cat="quality" target="_blank" rel="noopener">
-        <h2>Semgrep MCP <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Analyse de sécurité MCP via le CLI Semgrep maintenu.</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/getsentry/sentry-mcp" data-cat="quality" target="_blank" rel="noopener">
-        <h2>Sentry <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Inspecter les erreurs d&#x27;application et diagnostiquer les échecs.</p>
-        <div class="tags"><span class="tag cat">Tests et sécurité</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/cloudflare/mcp-server-cloudflare" data-cat="delivery" target="_blank" rel="noopener">
-        <h2>Cloudflare <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Gérer le déploiement d&#x27;applications et les ressources cloud.</p>
-        <div class="tags"><span class="tag cat">Déploiement</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://github.com/e2b-dev/E2B" data-cat="delivery" target="_blank" rel="noopener">
-        <h2>E2B <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Sandbox cloud sécurisée pour agents IA de niveau entreprise.</p>
-        <div class="tags"><span class="tag cat">Déploiement</span></div>
-      </a>
-      <a class="card" href="https://publish.my/" data-cat="delivery" target="_blank" rel="noopener">
-        <h2>Publish.my <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Publication de sites statiques pilotée par agents, avec activation par email.</p>
-        <div class="tags"><span class="tag cat">Déploiement</span><span class="tag">Web</span></div>
-      </a>
-      <a class="card" href="https://github.com/getsentry/XcodeBuildMCP" data-cat="delivery" target="_blank" rel="noopener">
-        <h2>XcodeBuildMCP <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Outils CLI et MCP pour compiler, exécuter et déboguer des projets Apple.</p>
-        <div class="tags"><span class="tag cat">Déploiement</span><span class="tag">MCP</span></div>
-      </a>
-      <a class="card" href="https://delta.dev/" data-cat="operations" target="_blank" rel="noopener">
-        <h2>Delta (Zed) <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Lancer des fils d&#x27;agents et relire leurs changements dans un espace de travail multijoueur qui relie conversation et historique du code. Compatible avec les dépôts Git existants.</p>
-        <div class="tags"><span class="tag cat">Agents</span><span class="tag">Desktop</span></div>
-      </a>
-      <a class="card" href="https://github.com/MusicMaster4/Duckweed" data-cat="operations" target="_blank" rel="noopener">
-        <h2>Duckweed <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Exécuter agents de code, shells, diffs Git et sessions dans un espace de travail local multiplateforme.</p>
-        <div class="tags"><span class="tag cat">Agents</span><span class="tag">Desktop</span></div>
-      </a>
-      <a class="card" href="https://github.com/lanesket/llm.log" data-cat="operations" target="_blank" rel="noopener">
-        <h2>llm.log <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Inspecter les coûts, tokens et traces de requêtes des modèles via un proxy local.</p>
-        <div class="tags"><span class="tag cat">Agents</span></div>
-      </a>
-      <a class="card" href="https://github.com/johannesjo/parallel-code" data-cat="operations" target="_blank" rel="noopener">
-        <h2>Parallel Code <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Exécuter des agents de code dans des worktrees Git isolés et relire leurs changements.</p>
-        <div class="tags"><span class="tag cat">Agents</span><span class="tag">Desktop</span></div>
-      </a>
-      <a class="card" href="https://github.com/shep-ai/shep" data-cat="operations" target="_blank" rel="noopener">
-        <h2>Shep <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Orchestrer des agents de code en parallèle dans des worktrees Git isolés, jusqu&#x27;au commit, au push, au suivi CI et aux brouillons de PR.</p>
-        <div class="tags"><span class="tag cat">Agents</span><span class="tag">CLI</span></div>
-      </a>
-      <a class="card" href="https://github.com/pungme/superagent-desktop" data-cat="operations" target="_blank" rel="noopener">
-        <h2>Superagent <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Utiliser Claude Code ou Codex dans un espace de travail macOS avec outils navigateur et iOS.</p>
-        <div class="tags"><span class="tag cat">Agents</span><span class="tag">Desktop</span></div>
-      </a>
-      <a class="card" href="https://github.com/aqua5230/usage" data-cat="operations" target="_blank" rel="noopener">
-        <h2>usage <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Voir les quotas des agents de code depuis la barre de menu macOS ou la zone de notification Windows.</p>
-        <div class="tags"><span class="tag cat">Agents</span><span class="tag">Desktop</span></div>
-      </a>
-      <a class="card" href="https://www.warp.dev/terminal" data-cat="operations" target="_blank" rel="noopener">
-        <h2>Warp Terminal <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Utiliser un terminal orienté agents et inspecter les workflows de code.</p>
-        <div class="tags"><span class="tag cat">Agents</span></div>
-      </a>
-      <a class="card" href="https://www.awwwards.com" data-cat="inspi" target="_blank" rel="noopener">
-        <h2>Awwwards <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Les sites primés.</p>
-        <div class="tags"><span class="tag cat">Inspiration</span></div>
-      </a>
-      <a class="card" href="https://component.gallery" data-cat="inspi" target="_blank" rel="noopener">
-        <h2>Component Gallery <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Comment les grands design systems traitent un même composant.</p>
-        <div class="tags"><span class="tag cat">Inspiration</span></div>
-      </a>
-      <a class="card" href="https://godly.website" data-cat="inspi" target="_blank" rel="noopener">
-        <h2>Godly <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Sites choisis à la main, avec un vrai travail de design.</p>
-        <div class="tags"><span class="tag cat">Inspiration</span></div>
-      </a>
-      <a class="card" href="https://minimal.gallery" data-cat="inspi" target="_blank" rel="noopener">
-        <h2>Minimal Gallery <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Sites haut de gamme sélectionnés, utiles comme référence à donner à un agent.</p>
-        <div class="tags"><span class="tag cat">Inspiration</span></div>
-      </a>
-      <a class="card" href="https://mobbin.com" data-cat="inspi" target="_blank" rel="noopener">
-        <h2>Mobbin <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Parcours d&#x27;applications réelles.</p>
-        <div class="tags"><span class="tag cat">Inspiration</span></div>
-      </a>
-      <a class="card" href="https://styles.refero.design" data-cat="inspi" target="_blank" rel="noopener">
-        <h2>Refero Styles <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Plus de 3 000 styles de produits réels, avec leur typographie.</p>
-        <div class="tags"><span class="tag cat">Inspiration</span></div>
-      </a>
-      <a class="card" href="https://21st.dev" data-cat="ui" target="_blank" rel="noopener">
-        <h2>21st.dev <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Registre de composants branchable aux agents via MCP.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://ui.aceternity.com" data-cat="ui" target="_blank" rel="noopener">
-        <h2>Aceternity UI <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Plus de 200 composants animés React/Tailwind.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://magicui.design" data-cat="ui" target="_blank" rel="noopener">
-        <h2>Magic UI <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Composants soignés pour applications web modernes.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://motion-primitives.com" data-cat="ui" target="_blank" rel="noopener">
-        <h2>Motion Primitives <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Composants d&#x27;animation et d&#x27;interaction prêts à l&#x27;emploi.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://ui.shadcn.com" data-cat="ui" target="_blank" rel="noopener">
-        <h2>shadcn/ui <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Référence pour des composants propres et réutilisables.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://www.shadcnblocks.com" data-cat="ui" target="_blank" rel="noopener">
-        <h2>Shadcnblocks <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Blocs complets, pas seulement des boutons.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://uiverse.io" data-cat="ui" target="_blank" rel="noopener">
-        <h2>Uiverse <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Éléments d&#x27;interface créés par la communauté.</p>
-        <div class="tags"><span class="tag cat">Composants UI</span></div>
-      </a>
-      <a class="card" href="https://3dicons.co" data-cat="anim" target="_blank" rel="noopener">
-        <h2>3dicons <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Icônes 3D gratuites pour interfaces modernes.</p>
-        <div class="tags"><span class="tag cat">Animation et effets</span></div>
-      </a>
-      <a class="card" href="https://animejs.com" data-cat="anim" target="_blank" rel="noopener">
-        <h2>Anime.js <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Bibliothèque JavaScript d&#x27;animation légère.</p>
-        <div class="tags"><span class="tag cat">Animation et effets</span></div>
-      </a>
-      <a class="card" href="https://text-effects.colorion.co" data-cat="anim" target="_blank" rel="noopener">
-        <h2>CSS Text Effects <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Animations et effets de texte en CSS.</p>
-        <div class="tags"><span class="tag cat">Animation et effets</span></div>
-      </a>
-      <a class="card" href="https://gradientbuttons.colorion.co" data-cat="anim" target="_blank" rel="noopener">
-        <h2>Gradient Buttons <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Styles et effets de boutons en dégradé.</p>
-        <div class="tags"><span class="tag cat">Animation et effets</span></div>
-      </a>
-      <a class="card" href="https://www.shadertoy.com" data-cat="anim" target="_blank" rel="noopener">
-        <h2>Shadertoy <span class="go" aria-hidden="true">↗</span></h2>
-        <p>Shaders à étudier et remixer.</p>
-        <div class="tags"><span class="tag cat">Animation et effets</span></div>
-      </a>
+    <section class="statbar" aria-label="Résumé du catalogue">
+      <div class="stat"><b>61</b><span>outils sélectionnés</span></div>
+      <div class="stat"><b>9</b><span>catégories</span></div>
+      <div class="stat"><b>12</b><span>serveurs MCP</span></div>
     </section>
-    <p class="empty" id="empty" hidden>Aucun outil ne correspond à cette recherche.</p>
 
-    <p class="sources">Sources : <a href="https://github.com/Scap-Mehdi/awesome-vibecoding" rel="noopener">awesome-vibecoding</a> (catalogue vérifié au 18/09/2026) pour les outils de développement ; liste partagée sur X pour le design et les composants. Les prix et conditions d'accès changent : consultez chaque site.</p>
-  </main>
-  <footer>
-    <a href="https://github.com/rachidbayou/Claude-prime">Code source sur GitHub</a>
-  </footer>
+    <main id="catalogue">
+      <div class="section-head">
+        <h2>Le bon outil<br>pour la bonne tâche.</h2>
+        <p>Filtrez par usage ou cherchez un nom. Les liens ouvrent les sites des outils dans un nouvel onglet.</p>
+      </div>
+      <div class="controls">
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input class="search" id="q" type="search" placeholder="Rechercher : MCP, terminal, animation…" aria-label="Rechercher un outil" autocomplete="off"></label>
+        <div class="filters" role="group" aria-label="Catégories">
+          <button class="filter active" type="button" data-cat="all">Tous</button>
+          <button class="filter" type="button" data-cat="code">Code</button>
+          <button class="filter" type="button" data-cat="apps">Prototypage</button>
+          <button class="filter" type="button" data-cat="context">Contexte et MCP</button>
+          <button class="filter" type="button" data-cat="quality">Tests et sécurité</button>
+          <button class="filter" type="button" data-cat="delivery">Déploiement</button>
+          <button class="filter" type="button" data-cat="operations">Agents</button>
+          <button class="filter" type="button" data-cat="inspi">Inspiration</button>
+          <button class="filter" type="button" data-cat="ui">Composants UI</button>
+          <button class="filter" type="button" data-cat="anim">Animation et effets</button>
+        </div>
+        <p class="count" id="count" aria-live="polite"></p>
+      </div>
+      <div class="catalog">
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer">Aider</a></h3>
+          <p>Pair programming en terminal avec des modèles cloud ou locaux et une intégration Git.</p>
+          <div class="meta"><span>CLI</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer">Claude Code</a></h3>
+          <p>Assistant de code agentique avec workflows en terminal et par projet.</p>
+          <div class="meta"><span>CLI</span><span>code.claude.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer">Cline</a></h3>
+          <p>Agent de code pour IDE, terminal et desktop, avec outils fichiers, commandes et navigateur.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a></h3>
+          <p>Éditeur et agent de code pour l&#x27;implémentation, le débogage et la revue de code.</p>
+          <div class="meta"><span>IDE</span><span>cursor.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer">Gemini CLI</a></h3>
+          <p>Agent de code open source en terminal avec accès par clé API, Vertex ou offre entreprise éligible. L&#x27;accès par abonnement grand public est retiré.</p>
+          <div class="meta"><span>CLI</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a></h3>
+          <p>Assistance au code et workflows d&#x27;agents dans GitHub et les IDE compatibles.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/aaif-goose/goose" target="_blank" rel="noopener noreferrer">Goose</a></h3>
+          <p>Agent local extensible avec workflows de code, interfaces desktop et CLI, et outils MCP.</p>
+          <div class="meta"><span>CLI</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://kiro.dev" target="_blank" rel="noopener noreferrer">Kiro</a></h3>
+          <p>Agent de code AWS avec workflows IDE et CLI, spécifications et tests.</p>
+          <div class="meta"><span>IDE</span><span>kiro.dev</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://openai.com/codex/" target="_blank" rel="noopener noreferrer">OpenAI Codex CLI</a></h3>
+          <p>Agent de code OpenAI qui s&#x27;exécute localement dans le terminal.</p>
+          <div class="meta"><span>CLI</span><span>openai.com</span></div>
+        </article>
+        <article class="tool" data-cat="code">
+          <div class="top"><span class="type">Code</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/earendil-works/pi" target="_blank" rel="noopener noreferrer">Pi</a></h3>
+          <p>Agent de code en terminal, extensible et intégrable comme harnais.</p>
+          <div class="meta"><span>CLI</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="apps">
+          <div class="top"><span class="type">Prototypage</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://bolt.new/" target="_blank" rel="noopener noreferrer">Bolt.new</a></h3>
+          <p>Création d&#x27;applications en langage naturel, par StackBlitz.</p>
+          <div class="meta"><span>Web</span><span>bolt.new</span></div>
+        </article>
+        <article class="tool" data-cat="apps">
+          <div class="top"><span class="type">Prototypage</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/dyad-sh/dyad" target="_blank" rel="noopener noreferrer">Dyad</a></h3>
+          <p>Créer des applications en local avec des fournisseurs de modèles configurables.</p>
+          <div class="meta"><span>Desktop</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="apps">
+          <div class="top"><span class="type">Prototypage</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer">Lovable</a></h3>
+          <p>Génération d&#x27;applications full-stack avec Supabase.</p>
+          <div class="meta"><span>Web</span><span>lovable.dev</span></div>
+        </article>
+        <article class="tool" data-cat="apps">
+          <div class="top"><span class="type">Prototypage</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.onlook.com/" target="_blank" rel="noopener noreferrer">Onlook</a></h3>
+          <p>Modifier visuellement les interfaces d&#x27;une application tout en travaillant sur le code.</p>
+          <div class="meta"><span>Web</span><span>onlook.com</span></div>
+        </article>
+        <article class="tool" data-cat="apps">
+          <div class="top"><span class="type">Prototypage</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://replit.com/" target="_blank" rel="noopener noreferrer">Replit</a></h3>
+          <p>Créer et itérer sur des applications avec Replit Agent.</p>
+          <div class="meta"><span>Web</span><span>replit.com</span></div>
+        </article>
+        <article class="tool" data-cat="apps">
+          <div class="top"><span class="type">Prototypage</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://v0.app/" target="_blank" rel="noopener noreferrer">v0</a></h3>
+          <p>L&#x27;IA de Vercel pour générer des UI et du React.</p>
+          <div class="meta"><span>Web</span><span>v0.app</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/caliber-ai-org/ai-setup" target="_blank" rel="noopener noreferrer">Caliber</a></h3>
+          <p>CLI qui génère et synchronise les configurations d&#x27;agents IA pour Claude Code, Cursor et Codex.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/upstash/context7" target="_blank" rel="noopener noreferrer">Context7</a></h3>
+          <p>Récupérer la documentation des bibliothèques comme contexte de code.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" target="_blank" rel="noopener noreferrer">Filesystem MCP</a></h3>
+          <p>Donner aux agents un accès contrôlé aux fichiers du projet.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener noreferrer">GitHub MCP</a></h3>
+          <p>Connecter les workflows de dépôts, d&#x27;issues et de pull requests.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/neondatabase/mcp-server-neon" target="_blank" rel="noopener noreferrer">Neon</a></h3>
+          <p>Connecter les workflows de développement aux bases de données Neon.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://developers.notion.com/guides/mcp/overview" target="_blank" rel="noopener noreferrer">Notion MCP</a></h3>
+          <p>MCP officiel hébergé pour chercher, lire et mettre à jour du contenu Notion.</p>
+          <div class="meta"><span>MCP</span><span>developers.notion.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/Fission-AI/OpenSpec" target="_blank" rel="noopener noreferrer">OpenSpec</a></h3>
+          <p>Cadre de développement piloté par les spécifications pour assistants de code IA.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="context">
+          <div class="top"><span class="type">Contexte et MCP</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/supabase/mcp" target="_blank" rel="noopener noreferrer">Supabase MCP</a></h3>
+          <p>MCP officiel pour les schémas, requêtes et configurations de projet Supabase.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/vostride/agent-qa" target="_blank" rel="noopener noreferrer">Agent QA</a></h3>
+          <p>Écrire et exécuter des tests web et mobile en langage naturel.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/microsoft/playwright-mcp" target="_blank" rel="noopener noreferrer">Playwright MCP (Microsoft)</a></h3>
+          <p>Automatisation officielle du navigateur par instantanés structurés des pages.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/The-PR-Agent/pr-agent" target="_blank" rel="noopener noreferrer">PR-Agent</a></h3>
+          <p>Relecteur de pull requests maintenu par la communauté, distinct de Qodo.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://getprbl.com" target="_blank" rel="noopener noreferrer">Prbl</a></h3>
+          <p>Scanner une application en ligne ou un dépôt pour trouver les failles fréquentes du code généré par IA. La GitHub Action commente les PR. Le correcteur Pro applique des corrections vérifiées.</p>
+          <div class="meta"><span>Web</span><span>getprbl.com</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.qodo.ai" target="_blank" rel="noopener noreferrer">Qodo</a></h3>
+          <p>Moteur de revue de code par IA (anciennement CodiumAI).</p>
+          <div class="meta"><span>Outil</span><span>qodo.ai</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp" target="_blank" rel="noopener noreferrer">Semgrep MCP</a></h3>
+          <p>Analyse de sécurité MCP via le CLI Semgrep maintenu.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="quality">
+          <div class="top"><span class="type">Tests et sécurité</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/getsentry/sentry-mcp" target="_blank" rel="noopener noreferrer">Sentry</a></h3>
+          <p>Inspecter les erreurs d&#x27;application et diagnostiquer les échecs.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="delivery">
+          <div class="top"><span class="type">Déploiement</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/cloudflare/mcp-server-cloudflare" target="_blank" rel="noopener noreferrer">Cloudflare</a></h3>
+          <p>Gérer le déploiement d&#x27;applications et les ressources cloud.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="delivery">
+          <div class="top"><span class="type">Déploiement</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/e2b-dev/E2B" target="_blank" rel="noopener noreferrer">E2B</a></h3>
+          <p>Sandbox cloud sécurisée pour agents IA de niveau entreprise.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="delivery">
+          <div class="top"><span class="type">Déploiement</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://publish.my/" target="_blank" rel="noopener noreferrer">Publish.my</a></h3>
+          <p>Publication de sites statiques pilotée par agents, avec activation par email.</p>
+          <div class="meta"><span>Web</span><span>publish.my</span></div>
+        </article>
+        <article class="tool" data-cat="delivery">
+          <div class="top"><span class="type">Déploiement</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/getsentry/XcodeBuildMCP" target="_blank" rel="noopener noreferrer">XcodeBuildMCP</a></h3>
+          <p>Outils CLI et MCP pour compiler, exécuter et déboguer des projets Apple.</p>
+          <div class="meta"><span>MCP</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://delta.dev/" target="_blank" rel="noopener noreferrer">Delta (Zed)</a></h3>
+          <p>Lancer des fils d&#x27;agents et relire leurs changements dans un espace de travail multijoueur qui relie conversation et historique du code. Compatible avec les dépôts Git existants.</p>
+          <div class="meta"><span>Desktop</span><span>delta.dev</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/MusicMaster4/Duckweed" target="_blank" rel="noopener noreferrer">Duckweed</a></h3>
+          <p>Exécuter agents de code, shells, diffs Git et sessions dans un espace de travail local multiplateforme.</p>
+          <div class="meta"><span>Desktop</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/lanesket/llm.log" target="_blank" rel="noopener noreferrer">llm.log</a></h3>
+          <p>Inspecter les coûts, tokens et traces de requêtes des modèles via un proxy local.</p>
+          <div class="meta"><span>Outil</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/johannesjo/parallel-code" target="_blank" rel="noopener noreferrer">Parallel Code</a></h3>
+          <p>Exécuter des agents de code dans des worktrees Git isolés et relire leurs changements.</p>
+          <div class="meta"><span>Desktop</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/shep-ai/shep" target="_blank" rel="noopener noreferrer">Shep</a></h3>
+          <p>Orchestrer des agents de code en parallèle dans des worktrees Git isolés, jusqu&#x27;au commit, au push, au suivi CI et aux brouillons de PR.</p>
+          <div class="meta"><span>CLI</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/pungme/superagent-desktop" target="_blank" rel="noopener noreferrer">Superagent</a></h3>
+          <p>Utiliser Claude Code ou Codex dans un espace de travail macOS avec outils navigateur et iOS.</p>
+          <div class="meta"><span>Desktop</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://github.com/aqua5230/usage" target="_blank" rel="noopener noreferrer">usage</a></h3>
+          <p>Voir les quotas des agents de code depuis la barre de menu macOS ou la zone de notification Windows.</p>
+          <div class="meta"><span>Desktop</span><span>github.com</span></div>
+        </article>
+        <article class="tool" data-cat="operations">
+          <div class="top"><span class="type">Agents</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.warp.dev/terminal" target="_blank" rel="noopener noreferrer">Warp Terminal</a></h3>
+          <p>Utiliser un terminal orienté agents et inspecter les workflows de code.</p>
+          <div class="meta"><span>Outil</span><span>warp.dev</span></div>
+        </article>
+        <article class="tool" data-cat="inspi">
+          <div class="top"><span class="type">Inspiration</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.awwwards.com" target="_blank" rel="noopener noreferrer">Awwwards</a></h3>
+          <p>Les sites primés.</p>
+          <div class="meta"><span>Outil</span><span>awwwards.com</span></div>
+        </article>
+        <article class="tool" data-cat="inspi">
+          <div class="top"><span class="type">Inspiration</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://component.gallery" target="_blank" rel="noopener noreferrer">Component Gallery</a></h3>
+          <p>Comment les grands design systems traitent un même composant.</p>
+          <div class="meta"><span>Outil</span><span>component.gallery</span></div>
+        </article>
+        <article class="tool" data-cat="inspi">
+          <div class="top"><span class="type">Inspiration</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://godly.website" target="_blank" rel="noopener noreferrer">Godly</a></h3>
+          <p>Sites choisis à la main, avec un vrai travail de design.</p>
+          <div class="meta"><span>Outil</span><span>godly.website</span></div>
+        </article>
+        <article class="tool" data-cat="inspi">
+          <div class="top"><span class="type">Inspiration</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://minimal.gallery" target="_blank" rel="noopener noreferrer">Minimal Gallery</a></h3>
+          <p>Sites haut de gamme sélectionnés, utiles comme référence à donner à un agent.</p>
+          <div class="meta"><span>Outil</span><span>minimal.gallery</span></div>
+        </article>
+        <article class="tool" data-cat="inspi">
+          <div class="top"><span class="type">Inspiration</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://mobbin.com" target="_blank" rel="noopener noreferrer">Mobbin</a></h3>
+          <p>Parcours d&#x27;applications réelles.</p>
+          <div class="meta"><span>Outil</span><span>mobbin.com</span></div>
+        </article>
+        <article class="tool" data-cat="inspi">
+          <div class="top"><span class="type">Inspiration</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://styles.refero.design" target="_blank" rel="noopener noreferrer">Refero Styles</a></h3>
+          <p>Plus de 3 000 styles de produits réels, avec leur typographie.</p>
+          <div class="meta"><span>Outil</span><span>styles.refero.design</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://21st.dev" target="_blank" rel="noopener noreferrer">21st.dev</a></h3>
+          <p>Registre de composants branchable aux agents via MCP.</p>
+          <div class="meta"><span>Outil</span><span>21st.dev</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://ui.aceternity.com" target="_blank" rel="noopener noreferrer">Aceternity UI</a></h3>
+          <p>Plus de 200 composants animés React/Tailwind.</p>
+          <div class="meta"><span>Outil</span><span>ui.aceternity.com</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://magicui.design" target="_blank" rel="noopener noreferrer">Magic UI</a></h3>
+          <p>Composants soignés pour applications web modernes.</p>
+          <div class="meta"><span>Outil</span><span>magicui.design</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://motion-primitives.com" target="_blank" rel="noopener noreferrer">Motion Primitives</a></h3>
+          <p>Composants d&#x27;animation et d&#x27;interaction prêts à l&#x27;emploi.</p>
+          <div class="meta"><span>Outil</span><span>motion-primitives.com</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer">shadcn/ui</a></h3>
+          <p>Référence pour des composants propres et réutilisables.</p>
+          <div class="meta"><span>Outil</span><span>ui.shadcn.com</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.shadcnblocks.com" target="_blank" rel="noopener noreferrer">Shadcnblocks</a></h3>
+          <p>Blocs complets, pas seulement des boutons.</p>
+          <div class="meta"><span>Outil</span><span>shadcnblocks.com</span></div>
+        </article>
+        <article class="tool" data-cat="ui">
+          <div class="top"><span class="type">Composants UI</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://uiverse.io" target="_blank" rel="noopener noreferrer">Uiverse</a></h3>
+          <p>Éléments d&#x27;interface créés par la communauté.</p>
+          <div class="meta"><span>Outil</span><span>uiverse.io</span></div>
+        </article>
+        <article class="tool" data-cat="anim">
+          <div class="top"><span class="type">Animation et effets</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://3dicons.co" target="_blank" rel="noopener noreferrer">3dicons</a></h3>
+          <p>Icônes 3D gratuites pour interfaces modernes.</p>
+          <div class="meta"><span>Outil</span><span>3dicons.co</span></div>
+        </article>
+        <article class="tool" data-cat="anim">
+          <div class="top"><span class="type">Animation et effets</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://animejs.com" target="_blank" rel="noopener noreferrer">Anime.js</a></h3>
+          <p>Bibliothèque JavaScript d&#x27;animation légère.</p>
+          <div class="meta"><span>Outil</span><span>animejs.com</span></div>
+        </article>
+        <article class="tool" data-cat="anim">
+          <div class="top"><span class="type">Animation et effets</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://text-effects.colorion.co" target="_blank" rel="noopener noreferrer">CSS Text Effects</a></h3>
+          <p>Animations et effets de texte en CSS.</p>
+          <div class="meta"><span>Outil</span><span>text-effects.colorion.co</span></div>
+        </article>
+        <article class="tool" data-cat="anim">
+          <div class="top"><span class="type">Animation et effets</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://gradientbuttons.colorion.co" target="_blank" rel="noopener noreferrer">Gradient Buttons</a></h3>
+          <p>Styles et effets de boutons en dégradé.</p>
+          <div class="meta"><span>Outil</span><span>gradientbuttons.colorion.co</span></div>
+        </article>
+        <article class="tool" data-cat="anim">
+          <div class="top"><span class="type">Animation et effets</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3><a href="https://www.shadertoy.com" target="_blank" rel="noopener noreferrer">Shadertoy</a></h3>
+          <p>Shaders à étudier et remixer.</p>
+          <div class="meta"><span>Outil</span><span>shadertoy.com</span></div>
+        </article>
+      </div>
+      <p class="empty" id="empty" hidden>Aucun outil ne correspond à cette recherche.</p>
+    </main>
+
+    <section class="method" id="methode">
+      <h2>Une méthode simple.</h2>
+      <div class="steps">
+        <div class="step"><b>01</b><span>Écrire l'objectif et les critères qui disent que c'est réussi.</span></div>
+        <div class="step"><b>02</b><span>Donner le contexte à l'agent : fichiers, règles, documentation.</span></div>
+        <div class="step"><b>03</b><span>Avancer par petites étapes et enregistrer un point de retour Git.</span></div>
+        <div class="step"><b>04</b><span>Relire les changements, tester, puis seulement déployer.</span></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Claude-prime · projet de Rachid</p>
+      <p><a href="https://github.com/rachidbayou/Claude-prime">Code sur GitHub</a></p>
+    </footer>
+  </div>
   <script src="outils.js"></script>
 </body>
 </html>
