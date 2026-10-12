@@ -5,6 +5,7 @@ Premier projet créé avec Claude Code : un site statique publié avec GitHub Pa
 ## Contenu
 
 - `index.html` : page d'accueil
+- `outils.html` : liste des outils utilisés
 - `style.css` : styles (clair/sombre automatique)
 - `.nojekyll` : désactive Jekyll, les fichiers sont servis tels quels
 - `CLAUDE.md` : consignes pour Claude Code
