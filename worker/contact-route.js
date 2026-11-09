@@ -2,7 +2,8 @@
 // À intégrer dans le Worker, pas à publier tel quel : adapter les lignes marquées [À VÉRIFIER].
 //
 // Hypothèses (je n'ai pas le code du Worker) :
-//  - stockage OVH Object Storage (API S3), via ovh-s3.js ;
+//  - stockage Cloudflare KV : espace de noms lié au Worker sous le nom CONTACTS
+//    (wrangler.toml : [[kv_namespaces]] binding = "CONTACTS", id = "…") ;
 //  - variable ALLOWED_ORIGIN = origine du site, sans slash final ;
 //  - une fonction verifyTurnstile(token, ip, env) existe déjà.            [À VÉRIFIER]
 
@@ -12,7 +13,6 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // [À VÉRIFIER] remplacer par les helpers déjà présents dans le Worker.
 // import { verifyTurnstile, corsHeaders } from './security.js';
-import { putObject } from './ovh-s3.js';
 
 function json(body, status, env) {
   return new Response(JSON.stringify(body), {
@@ -89,7 +89,9 @@ export async function handleContact(request, env) {
   const record = { id, receivedAt: now.toISOString(), name, email, message };
 
   try {
-    await putObject(env, key, JSON.stringify(record));
+    // Pas d'expiration : durée de conservation à définir. [À COMPLÉTER]
+    // (KV accepte { expirationTtl: <secondes> } en 3e argument pour une suppression automatique.)
+    await env.CONTACTS.put(key, JSON.stringify(record));
   } catch {
     return json({ error: 'Enregistrement impossible, réessayez plus tard.' }, 502, env);
   }
