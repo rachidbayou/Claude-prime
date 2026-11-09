@@ -5,14 +5,14 @@
 //  - stockage Cloudflare KV : espace de noms lié au Worker sous le nom CONTACTS
 //    (wrangler.toml : [[kv_namespaces]] binding = "CONTACTS", id = "…") ;
 //  - variable ALLOWED_ORIGIN = origine du site, sans slash final ;
-//  - une fonction verifyTurnstile(token, ip, env) existe déjà.            [À VÉRIFIER]
+//  - variables/secrets : ALLOWED_ORIGIN (variable), TURNSTILE_SECRET_KEY (secret), comme en séance 4.
 
 const MAX_BODY_BYTES = 16 * 1024;            // taille maximale de la requête
 const LIMITS = { name: 100, email: 254, message: 5000 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// [À VÉRIFIER] remplacer par les helpers déjà présents dans le Worker.
-// import { verifyTurnstile, corsHeaders } from './security.js';
+// Si le Worker de la séance 4 a déjà sa propre vérification Turnstile, importer celle-là à la place.
+import { verifyTurnstile } from './turnstile.js';
 
 function json(body, status, env) {
   return new Response(JSON.stringify(body), {
@@ -77,10 +77,12 @@ export async function handleContact(request, env) {
   if (!message || message.length > LIMITS.message) return json({ error: 'Message invalide.' }, 400, env);
   if (!token) return json({ error: 'Contrôle anti-robot manquant.' }, 400, env);
 
-  // Turnstile — [À VÉRIFIER] réutiliser la fonction existante et sa signature
+  // Turnstile (success + hostname + action), avant toute écriture
   const ip = request.headers.get('CF-Connecting-IP') || '';
-  const ok = await verifyTurnstile(token, ip, env);
-  if (!ok) return json({ error: 'Contrôle anti-robot refusé.' }, 403, env);
+  let human;
+  try { human = await verifyTurnstile(token, ip, env); }
+  catch { return json({ error: 'Vérification indisponible, réessayez plus tard.' }, 502, env); }
+  if (!human) return json({ error: 'Contrôle anti-robot refusé.' }, 403, env);
 
   // Enregistrement : contacts/AAAA-MM-JJ/identifiant.json (l'IP n'est pas stockée)
   const now = new Date();
