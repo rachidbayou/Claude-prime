@@ -2,7 +2,7 @@
 // À intégrer dans le Worker, pas à publier tel quel : adapter les lignes marquées [À VÉRIFIER].
 //
 // Hypothèses (je n'ai pas le code du Worker) :
-//  - stockage R2 lié sous le nom BUCKET (si OVH : voir la note en bas) ;
+//  - stockage OVH Object Storage (API S3), via ovh-s3.js ;
 //  - variable ALLOWED_ORIGIN = origine du site, sans slash final ;
 //  - une fonction verifyTurnstile(token, ip, env) existe déjà.            [À VÉRIFIER]
 
@@ -12,6 +12,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // [À VÉRIFIER] remplacer par les helpers déjà présents dans le Worker.
 // import { verifyTurnstile, corsHeaders } from './security.js';
+import { putObject } from './ovh-s3.js';
 
 function json(body, status, env) {
   return new Response(JSON.stringify(body), {
@@ -87,9 +88,11 @@ export async function handleContact(request, env) {
   const key = `contacts/${now.toISOString().slice(0, 10)}/${id}.json`;
   const record = { id, receivedAt: now.toISOString(), name, email, message };
 
-  await env.BUCKET.put(key, JSON.stringify(record), {
-    httpMetadata: { contentType: 'application/json' }
-  });
+  try {
+    await putObject(env, key, JSON.stringify(record));
+  } catch {
+    return json({ error: 'Enregistrement impossible, réessayez plus tard.' }, 502, env);
+  }
 
   return json({ id }, 201, env);
 }
@@ -97,5 +100,3 @@ export async function handleContact(request, env) {
 // Branchement dans le routeur existant :
 //   if (url.pathname === '/contact') return handleContact(request, env);
 //
-// OVH (S3 compatible) : remplacer env.BUCKET.put(...) par un PutObject signé
-// (même clé, même contenu). Dites-moi le stockage réel et je l'adapte.   [À COMPLÉTER]
