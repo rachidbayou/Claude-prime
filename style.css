@@ -31,3 +31,9 @@ h2 { font-size: 1.3rem; margin: 2rem 0 .5rem; }
 .form button { justify-self: start; font: inherit; font-weight: 700; padding: .7rem 1.4rem; color: #fff; background: var(--accent); border: 0; border-radius: 999px; cursor: pointer; }
 .form button:disabled { opacity: .6; cursor: wait; }
 .hint { color: var(--muted); font-size: .9rem; margin: 0; }
+
+/* Boutons de la page Contact */
+.btn { display: inline-block; padding: .75rem 1.6rem; font-weight: 700; color: #fff; background: var(--accent); border: 2px solid var(--accent); border-radius: 999px; text-decoration: none; }
+.btn:hover, .btn:focus-visible { filter: brightness(.92); }
+.btn.alt { color: var(--accent); background: transparent; }
+.btns { display: flex; flex-wrap: wrap; gap: .75rem; }
