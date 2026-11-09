@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Claude-prime</title>
+  <meta name="theme-color" content="#c15f3c">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p><a href="index.html">← Accueil</a></p>
+    <h1>Contact</h1>
+    <p class="lead">Une question, une remarque ? Écrivez-moi avec ce formulaire.</p>
+    <form id="contact" class="form" novalidate
+          data-endpoint="https://adresse-du-worker/contact"><!-- [À COMPLÉTER : URL_WORKER réelle] -->
+      <label>Nom
+        <input name="name" type="text" maxlength="100" autocomplete="name" required>
+      </label>
+      <label>Adresse e-mail
+        <input name="email" type="email" maxlength="254" autocomplete="email" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="7" maxlength="5000" required></textarea>
+      </label>
+      <!-- Turnstile : clé de site publique, jamais la clé secrète. [À COMPLÉTER : clé de site] -->
+      <div class="cf-turnstile" data-sitekey="[À COMPLÉTER : clé de site Turnstile]"></div>
+      <p class="hint">Les informations saisies sont enregistrées pour traiter votre demande. Détails : <a href="donnees-personnelles.html">Cookies / Données personnelles</a>.</p>
+      <button type="submit">Envoyer</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <footer>
+    <nav aria-label="Pied de page">
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="aide.html">Aide</a></li>
+        <li><a href="info-site.html">Info site</a></li>
+        <li><a href="accessibilite.html">Accessibilité : non conforme</a></li>
+        <li><a href="#">Site de [À COMPLÉTER : nom de l’organisme]</a><!-- [À COMPLÉTER : URL du site de l’organisme] --></li>
+        <li><a href="donnees-personnelles.html">Cookies / Données personnelles</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="contact.js"></script>
+</body>
+</html>

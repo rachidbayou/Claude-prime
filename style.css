@@ -15,3 +15,19 @@ code { background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 4p
 footer { padding: 1.5rem 1rem; text-align: center; color: var(--muted); }
 a { color: var(--accent); }
 .magritte { margin-top: 2rem; color: var(--muted); font-style: italic; }
+
+/* Pied de page commun */
+footer nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.25rem; font-size: .95rem; }
+.todo { background: rgba(255,200,0,.25); padding: 0 .25em; border-radius: 3px; }
+h2 { font-size: 1.3rem; margin: 2rem 0 .5rem; }
+.infos dt { font-weight: 600; margin-top: 1rem; }
+.infos dd { margin: 0; color: var(--muted); }
+
+/* Formulaire de contact */
+.form { display: grid; gap: 1rem; }
+.form label { display: grid; gap: .35rem; font-weight: 600; }
+.form input, .form textarea { font: inherit; padding: .6rem .8rem; color: var(--fg); background: transparent; border: 1px solid rgba(127,127,127,.5); border-radius: 8px; }
+.form input:focus, .form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.form button { justify-self: start; font: inherit; font-weight: 700; padding: .7rem 1.4rem; color: #fff; background: var(--accent); border: 0; border-radius: 999px; cursor: pointer; }
+.form button:disabled { opacity: .6; cursor: wait; }
+.hint { color: var(--muted); font-size: .9rem; margin: 0; }
